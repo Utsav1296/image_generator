@@ -6,7 +6,8 @@ import { downloadImage } from '../utils'
 const Card = ({ _id, name, photo, prompt }) => {
    return (
       <section className='rounded-xl relative group shadow-card hover:shadow-cardhover transition-all delay-300 card'>
-         <img src={photo} alt={prompt} className='h-auto w-full object-cover rounded-xl' />
+         {/* for lazy loading images  */}
+         <img loading='lazy' src={photo} alt={prompt} className='h-auto w-full object-cover rounded-xl' />
 
          <div className="group-hover:flex max-h-[94.5%] hidden">
             <div className="flex flex-col bg-black absolute bottom-1 left-1 right-1 p-4 h-auto rounded-lg">

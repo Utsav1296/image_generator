@@ -17,7 +17,6 @@ const ThemeSwitch = () => {
    const themeCheck = () => {
       if (userTheme === 'dark' || (!userTheme && systemTheme)) {
          document.documentElement.classList.add('dark')
-         { console.log(document.documentElement) }
          setIsDark(true)
          return;
       }
